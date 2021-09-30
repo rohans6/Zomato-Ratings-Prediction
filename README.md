@@ -24,11 +24,13 @@ ExtraTressRegressor(n_estimators=1450) performed best with 0.94 R2 Score.
 python model.py
 ```
 This would create a serialized version of our model into a file model.pkl.
+
 2. Run app.py using below command to start Flask API
 ```
 python app.py
 ```
 By default, flask will run on port 5000.
+
 3. Navigate to URL http://localhost:5000
 You will be able to see home-page.
 Enter valid entries and click on predict button to get rating for your restaurant
