@@ -15,3 +15,20 @@ Looked at different plots to better understand the data. Some of plots from anal
 ![Onine Order and Book Table](ob.png)
 ![Histograms of Ratings and Average Cost of 2 People](h.png)
 ![Top 10 Cuisines](c.png)
+# Eval Metric and Modelling
+R2_Score was Evaluation Metric
+ExtraTressRegressor(n_estimators=1450) performed best with 0.94 R2 Score.
+# Deployment
+1. Ensure that you are in the project home directory. Create the machine learning model by running below command -
+```
+python model.py
+```
+This would create a serialized version of our model into a file model.pkl
+2. Run app.py using below command to start Flask API
+```
+python app.py
+```
+By default, flask will run on port 5000.
+3. Navigate to URL http://localhost:5000
+You will be able to see home-page.
+Enter valid entries and click on predict button to get rating for your restaurant
