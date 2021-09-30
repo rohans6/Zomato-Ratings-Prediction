@@ -12,4 +12,6 @@
 * Rest Type:-    Type of Restaurant
 # EDA:-
 Looked at different plots to better understand the data. Some of plots from analysis:-
-![Onine Order and Book Table(ob.png)
+![Onine Order and Book Table](ob.png)
+![Histograms of Ratings and Average Cost of 2 People](h.png)
+![Top 10 Cuisines](c.png)
