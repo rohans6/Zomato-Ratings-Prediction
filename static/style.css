@@ -1,0 +1,39 @@
+body {
+
+    background-image: url('zomato1.png');
+    
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    
+ 
+    background-size: cover;
+    
+
+    background-color:#464646;
+  }
+  @media only screen and (max-width: 767px) {
+    body {
+      background-image: url('Mob.png');
+    }
+      }
+#form
+{
+    justify-content: center;
+    text-align: center;
+}
+#mar
+{
+    margin-bottom: 10px;
+}
+h4{
+    color:black;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+#Predict{
+    color: red;
+}
