@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zomato Rating</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"
+    </head>
+    <body class="container">
+        <div id="form">
+            <br><br><br><br><br><br><br>
+            <h4>Predict Zomato Restaurant<br> Ratings for Bangalore Restaurants</h4><br>
+            <form action="{{ url_for('predict')}}"method="post">
+                <div id="mar" class="badge badge-light">
+                <label>Online Order</label>
+                <select name="order" id="order">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    
+                </select>
+                </div><br>
+                <div id="mar" class="badge badge-light">
+                    <label>Book Table</label>
+                    <select name="table" id="table">
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                    </select>
+                    </div><br>
+                <div id="mar" class="badge badge-light">
+                    <label>Rest Type</label>
+                    <select name="Rest_Type" id="Rest_Type">
+                        <option value="Bakery">Bakery</option>
+                        <option value="Bakery, Beverage Shop">Bakery, Beverage Shop</option>
+                        <option value="Bakery, Cafe">Bakery, Cafe</option>
+                        <option value="Bakery, Dessert Parlor">Bakery, Dessert Parlor</option>
+                        <option value="Bakery, Food Court">Bakery, Food Court</option>
+                        <option value="Bakery, Quick Bites">Bakery, Quick Bites</option>
+                        <option value="Bar">Bar</option>
+                        <option value="Bar, Casual Dining">Bar, Casual Dining</option>
+                        <option value="Bar, Lounge">Bar, Lounge</option>
+                        <option value="Cafe, Dessert Parlor">Cafe, Dessert Parlor</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    </div><br>
+                    
+                        <div id="mar" class="badge badge-light">
+                            <label>Location</label>
+                            <select name="Location" id="Location">
+                                <option value="BTM">BTM</option>
+                                <option value="Banashankari">Banashankari</option>
+                                <option value="Banaswadi">Banaswadi</option>
+                                <option value="Bannerghatta Road">Bannerghatta Road</option>
+                                <option value="Basavanagudi">Basavanagudi</option>
+                                <option value="Basaveshwara Nagar">Basaveshwara Nagar</option>
+                                <option value="Bellandur">Bellandur</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            </div><br>
+                            <input type="text" name="Votes" placeholder="Enter Votes" required="required">
+                            <input type="Cost" name="Cost" placeholder="Enter Average Cost of 2 People" required="required">
+                            
+                
+            
+                <br>
+                <input type="submit" value="PREDICT">
+              </form>
+            <br>
+            <br>
+            <div id="Predict">{{ prediction_text }}</div>
+        </div>
+    </body>
+</html>
